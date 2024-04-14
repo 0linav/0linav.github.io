@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Bitácora 2</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">Olinav</p>
+            <nav>
+                <a href="#flex">Flexbox</a>
+                <a href="#perso">Propiedades personalizadas</a>
+                <a href="#tipores">Tipografia responsiva</a>
+                <a href="#agent">User-agent</a>
+            </nav>
+        </div>
+    </header>
+    <section id="hero">
+        <h1>Bitácora 2</h1>
+    </section>
+    <main>
+        <section id="flex">
+            <div class="container">
+                <div class="imag"></div>
+                <div class="texto1">
+                    <h2>Flexbox</h2>
+                    <p>Lo más importante es que el diseño de flexbox es independiente de la dirección en ligar de los
+                        diseños regulares (bloque
+                        que se basa verticalmente y en línea que se basa horizontalmente).
+                        Si bien estos funcionan bien para las páginas, carecen de flexibilidad para admitir aplicaciones
+                        grandes o complejas
+                        (especialmente cuando se trata de cambio de orientación, cambio de tamaño, estiramiento,
+                        encogimiento, etc.)</p>
+                </div>
+            </div>
+        </section>
+        <section class="cont">
+            <div class="container">
+                <div class="texto">
+                    <button onclick="funcion()" id="textOculto_btn">
+                        <h3>Contenedor flexible</h3>
+                    </button>
+                    <script>
+                        function funcion() { document.getElementById("textOculto").classList.toggle("mostrar") }
+                    </script>
+                    <span class="oculto" id="textOculto">
+                        <ul>
+                            <li><strong>Display flex</strong>: Esto define un contenedor flexible; en línea o bloque en
+                                función del valor
+                                dado. Permite un contexto flexible para todos sus hijos directos.</li>
+                            <li><strong>Flex-direction</strong>: Esto establece el eje principal, definiendo la
+                                dirección en
+                                que se colocan
+                                los elementos flexibles en el contenedor flexible. Flexbox es (aparte del ajuste
+                                opcional)
+                                un concepto de
+                                diseño de una la dirección. Predeterminado, izquierda a derecha (row), derecha a
+                                izquierda
+                                (row-reverse) e igual que row pero de arriba a abajo (column)</li>
+                            <li><strong>Flex-wrap</strong>: Por defecto, todos los elementos intentarán encajar en una
+                                línea. Puede cambiar eso y permitir que los elementos se ajusten según sea necesario con
+                                esta prioridad. Predeterminado. Todos los elementos flexibles se desplazan de arriba
+                                abajo
+                                en una línea. (nonwrap), los elementos flexibles se desplazan de arriba a abajo en
+                                varias
+                                líneas (wrap), los elementos flexibles de desplazan de abajo hacia arriba en varias
+                                líneas
+                                (wrap-reverse).</li>
+                            <li><strong>Flex-flow</strong>: Esta es una abreviatura de propiedades de flex direction y
+                                flex
+                                wrap, que juntas definen los ejes principal y
+                                transversal del contenedor flexible.</li>
+                            <li><strong>Justify-content</strong>: Esto define la alineación a lo largo del eje
+                                principal.
+                                Ayuda a distribuir el espacio libre adicional que sobra cuando todos los elementos
+                                flexibles
+                                de una línea son inflexibles o flexibles, pero han alcanzado su tamaño máximo. También
+                                ejerce cierto control sobre la alineación de los elementos cuando se desbordan en la
+                                línea.
+                                Flex-start: Predeterminado. Loa ítems se alinean hacia la línea de inicio. Flex-end: los
+                                ítems se alinean hacia la línea final. Center: los ítems se están centrados a lo largo
+                                de la
+                                línea.
+                                Space-between: los elementos se distribuyen uniformemente en la línea; el primer
+                                elemento
+                                está en la línea de inicio, el último elemento en la línea de final. Space-around: los
+                                elementos se distribuyen uniformemente en la línea con el mismo espacio a su alrededor.
+                                Tenga en cuenta que visualmente los espacios no son iguales, ya que todos los elementos
+                                tienen el mismo espacio en ambos lados. Space-evenly: los elementos se distribuyen de
+                                modo
+                                que el espaciado entre dos elementos (y el espacio en los bordes) sea igual. </li>
+                            <li><strong>Align-items</strong>: Esto define el comportamiento predeterminado de como los
+                                elementos flexibles se distribuyen a lo largo del eje transversal en la línea actual. Es
+                                como la versión de justify-content para el eje transversal (perpendicular al eje
+                                principal).
+                                Stretch: Predeterminado. Estirar para llenar el contenedor (aun respeta min-width/
+                                max-width).
+                                Flex-star: los elementos se colocan en la línea de inicio (arriba).
+                                Flex-end: los elementos se colocan en la línea de abajo.
+                                Baseline: los elementos están alineados, como la alineación de sus líneas base.
+                            </li>
+                            <li><strong>Align-content</strong>: Esta propiedad alinea los renglones de un contenedor
+                                flexible cuando hay espacio extra en el eje transversal de manera similar a como
+                                justify-content alinea elementos individuales dentro del eje principal. Esta propiedad
+                                no
+                                tiene afecto cuando solo hay una línea de elementos flexibles. Flex-star: alineado al
+                                inicio
+                                del contenedor.
+                                Flex-end: alineado hasta el final del contenedor.
+                                Center: en el centro del contenedor.
+                                Stretch: Predeterminado. Estirar líneas para ocupar el espacio restante.
+                                Space-between: líneas uniformemente distribuidas; la primera línea está al comienzo del
+                                contenedor, mientras que la
+                                última está al final.
+                                Space-around: líneas distribuidas uniformemente con el mismo espacio alrededor de cada
+                                línea.
+                            </li>
+                            <li><strong>Gap</strong>: La propiedad gap controla el espacio entre elementos flexibles. Se
+                                aplica ese espacio solo entre elementos que no están en los bordes exteriores.</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="cont">
+            <div class="container">
+                <div class="texto">
+                    <button onclick="funcion1()" id="textOculto2_btn">
+                        <h3>Propiedades para los hijos</h3>
+                    </button>
+                    <script>
+                        function funcion1() { document.getElementById("textOculto2").classList.toggle("mostrar") }
+                    </script>
+                    <span class="oculto" id="textOculto2">
+                        <ul>
+                            <li><strong>Order</strong>: Por default, los elementos felxibles se presenta en el orden de
+                                origen. Sin embargo, la propiedad orden controla el orden en el que aparecen en el
+                                contenedor flexible.</li>
+                            <li><strong>Flex-grow</strong>: Define la capacidad para que un ítem crezca si es necesario.
+                                Acepta un valor entero que sirve como proporción. Indica que cantidad de espacio dentro
+                                del
+                                contenedor flexible debe ocupar el ítem. Los números negativos no son validos. La
+                                formula
+                                para calcular el tamaño de una unidad de crecimiento es:
+                                Unidad de crecimiento= espacio disponible / suma de flex-grow
+                            </li>
+                            <li><strong>Flex-shrink</strong>: Especifica la capacidad de un elemento para reducir en
+                                relación con el resto de los elementos flexibles del contenedor. La formula para
+                                calcular el
+                                tamaño de una unidad de reducción es la siguiente: Unidad de reducción: espacio faltante
+                                /
+                                suma de flex-shrink.
+                            </li>
+                            <li><strong>Flex-basis</strong>: Esto define el tamaño predetermninado de un elemento antes
+                                de
+                                distribuir el espacio restante. Puede ser una longitud (por ejemplo, 20%, 5rem, etc.) o
+                                una
+                                palabra clave. Numero; Una unidad de longitud o porcentaje, que especifica la longitud
+                                inicial de los elementos flexibles. auto; Predeterminado. La longitud es igual a la
+                                longitud
+                                del elemento flexible. Si el ítem no tiene una longitud
+                                especificada, la longitud será de acuerdo con su concepto. initial; Establece esta
+                                propiedad
+                                a su valor predeterminado. inherit; Hereda esta propiedad de su elemento padre. Si se
+                                establece en 0, el espacio adicional alrededor del contenido no se toma en cuenta. Si se
+                                configura en auto, el
+                                espacio adicional se distribuye según su valor de flex-grow.</li>
+                            <li><strong>Flex</strong>: Es la abreviatura de flex-grow, flex-shrink y flex-basis
+                                combinadas.
+                                EL segundo y tercer parámetro son opcionales. El
+                                valor predeterminado es 0 1 auto.
+                                Se recomienda utilizar la propiedad abreviada en lugar de establecer las propiedades
+                                individuales.
+                            </li>
+                            <li><strong>Align-self</strong>: Esto permite que la alineación predeterminada (o la
+                                especificada por aling-items) se anule para los elementos flex
+                                específicos. Hay que tener en cuenta que las propiedades float, clear y vertical-align
+                                no
+                                tienen efecto en un elemento
+                                flexible. Acepta 5 valores:
+                                Flex-start: el borde del margen de inicio cruzado del elemento se coloca en la línea de
+                                inicio cruzado.
+                                Flex-end: el borde del borde transversal del elemento se coloca en la línea del extremo
+                                transversal.
+                                Center: el elemento está centrado en el eje transversal.
+                                Baseline: los elementos están alineados, así como su línea de base está alineada.
+                                Stretch: Predeterminada. Estirar para llenar el contenedor (respetando min/max-width).
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section id="perso">
+            <div class="container">
+                <div class="textoizquierda">
+                    <h2>Propiedades personalizadas</h2>
+                    <p>Lo más importante es que el diseño de flexbox es independiente de la dirección en ligar de los
+                        diseños regulares (bloque
+                        que se basa verticalmente y en línea que se basa horizontalmente).
+                        Si bien estos funcionan bien para las páginas, carecen de flexibilidad para admitir aplicaciones
+                        grandes o complejas
+                        (especialmente cuando se trata de cambio de orientación, cambio de tamaño, estiramiento,
+                        encogimiento, etc.)</p>
+                </div>
+                <div class="imag"></div>
+            </div>
+        </section>
+        <section id="root">
+            <div class="container">
+                <div class="texto">
+                    <h3>:root</h3>
+                    <p>Si bien la pseudo-clase :root y el selecto html representan a los mismo elementos HTML, es útil
+                        saber que :root tiene
+                        una mayor especificidad.
+                        Los selectores de pseudo-clses tiene una especificidad igual a la de una clase, que es mas alta
+                        que un selector de
+                        elementos básicos.
+                        La pseudo-clase :root puede ser útil para declarar variables CSS globales.
+                    </p>
+                    <h3>Variables CSS</h3>
+                    <p>En CSS, las propiedades personalizadas, también conocidas como variables, son entidades que
+                        contienen valores
+                        especificas que se pueden volver a utilizar en un documento.</p>
+                    <p>Las variables CSS permiten que un valor se almacene en un lugar y luego se haga referencia en
+                        varios lugares. Se
+                        declaran con la siguiente sintaxis:
+                        --nombre: valor;
+                        Y se invocan mediante la función var(), por ejemplo:
+                        Propiedad: var(--nombre);
+                        Las variables CSS pueden responder al trabajo con media queries.
+                        Las variables CSS pueden tener acceso al HTML, lo que significa que pueden ser combinados con
+                        JS.
+                    </p>
+                    <h3>Declaración Variables CSS</h3>
+                    <p>Para declara propiedades personalizadas (variables) se debe usar un nombre que comience con dos
+                        guiones (--), y un valor
+                        que puede ser cualquier valor valido de CSS. Como cualquier otra propiedad, se escribe dentro de
+                        las reglas CSS, por
+                        ejemplo:
+                        Elemento{
+                        --main color: red;
+                        }
+                    </p>
+                    <h3>Nombres de variables CSS</h3>
+                    <p>Los nombres de las variables CSS distinguen entre mayúsculas y minúsculas.Es importante el uso de
+                        identificadores semánticos, de esta forma será más fácil de entender.</p>
+                    <h3>Alcance de variables CSS</h3>
+                    <p>El alcance (ámbito) en el que podremos usar la variable, dependerá del selector donde se declare
+                        la variable. Una buena
+                        practica es declara variables en la pseudo-clase :root, y así aplicarlas globalmente al
+                        documento HTLM:
+                        :root{
+                        --main-bg-color:Brown;
+                        }
+                    </p>
+                    <h3>Herencia de las variables CSS</h3>
+                    <p>Las propiedades personalizadas heredan. Lo que significa que si no se establece ningún valor para
+                        una propiedad
+                        personalizada en un elemento dado, se utiliza el valor de su elemento padre.</p>
+                </div>
+            </div>
+        </section>
+        <section id="tipores">
+            <div class="container">
+                <div class="imag"></div>
+                <div class="texto1">
+                    <h2>Tipografía Responsiva</h2>
+                    <p>Junto con el color, la tipografía puede alterar por completo el significado que asociamos a un
+                        proyecto. El texto puede
+                        decir una cosa; pero las letras, otra muy diferente.</p>
+                    <h3>La legibilidad</h3>
+                    <p>Básicamente es la facilidad con que se puede leer y comprender un texto.
+                        En un sentido mas amplio es la aptitud de un texto de ser leído fácil y cómodamente, y esta
+                        aptitud en la web hace
+                        referencia a la familia tipográfica, color y contraste de la tipografía, líneas de palabras,
+                        párrafos y otros elementos
+                        como imágenes, videos, animaciones, etc.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="texto">
+                    <h3>El tamaño de la letra</h3>
+                    <p>Estudios concluyen que es un error costoso si el texto es menor a 16 px. 16 pixeles no es un
+                        tamaño grande, es el tamaño
+                        por defecto en muchos navegadores. 16px o 18px deben ser las primeras medidas a probar.</p>
+                    <p>Con un consumo de contenido cada vez mayor en móvil, el tamaño de fuente para móvil también
+                        debe
+                        permitir una lectura
+                        cómoda. Los usuarios suelen tener el texto mas cerca de los ojos cuando navegan en móvil que
+                        cuando lo hacen en
+                        escritorio.</p>
+                    <p>Es importante no perder de vista el concepto de que los usuarios de la web son tus clientes
+                        que
+                        de alguna forma van a
+                        consumir los productos y servicios. Y debemos crear un ambiente agradable. En un proyecto
+                        web
+                        esto se logra
+                        proporcionando la mejor experiencia de usuario posible. Y los usuarios lo que mas hacen en
+                        la
+                        web es leer.</p>
+                    <h3>Número de palabras por línea</h3>
+                    <p>El ancho de línea es otro factor decisivo. Según John Kane en su Manual de tipografía, el
+                        ancho
+                        de línea optimo contiene
+                        entre 35 y 65 caracteres (7-12 palabras aprox). Aunque estas indicaciones fueron sugeridas
+                        para
+                        el papel en un
+                        principio, sirven también para tener una legibilidad optima en pantalla.
+                        Debemos definir un ancho para la caja de texto y contar cuantos caracteres entran en función
+                        del
+                        tamaño.
+                    </p>
+                    <h3>Combinaciones tipográficas</h3>
+                    <p>Usar diferentes familias tipográficas te permitirá separar e identificar mejores bloques de
+                        texto, establecer jerarquías
+                        claras, mejorar la legibilidad de los textos y, en definitiva, hacer que el usuario se quede
+                        mas
+                        tiempo en la web.</p>
+                    <h3>El interlineado</h3>
+                    <p>En la web el interlineado lo podemos ajustar con la propiedad alto de línea o line-height,
+                        que es
+                        la distancia entre dos
+                        líneas. La recomendación es establecer el line-height al 120% (multiplicar por 1.2) del
+                        tamaño
+                        del texto. No obstante,
+                        como casi siempre que trabajamos con letras, tenemos que darle mas importancia al aspecto
+                        visual, la apariencia óptica,
+                        que a los números y a las matemáticas.</p>
+                </div>
+            </div>
+        </section>
+        <section id="color">
+            <div class="container">
+                <div class="textoizquierda">
+                    <h3>El color</h3>
+                    <p>No existe una regla general para la combinación de colores, eso va a depender mucho del proyecto
+                        que se este realizando.
+                        El w3C sugiere que se use el contraste adecuado o los colores que hagan que se distinga el texto
+                        del fondo. Es
+                        importante verificar el contraste antes de aplicarlo al diseño.
+                    </p>
+                    <p>Si es posible, usa colores Flat UI. Se trata de colores nítidos que permiten una gran cantidad de
+                        combinaciones y que,
+                        además, no son dolorosas para los ojos. Además, puede utilizar herramientas como
+                        <a href="https://color.adobe.com/es/créate/color-wheel">Color Adobe.</a>
+                    </p>
+                </div>
+                <div class="imag"></div>
+            </div>
+            <div class="container">
+                <div class="texto">
+                    <h3>Unidades de rem</h3>
+                    <p>El uso de pixeles y ems es algo habitual. Mientras que los px son unidades absolutas, los ems son
+                        unidades relativas al
+                        elemento padre. Esto significa que cuando cambia el tamaño del navegador, es difícil calcular el
+                        tamaño para lograr el
+                        resultado deseado.</p>
+                    <p>Es mejor opción usar rems. Los rems, también conocidos como “root em”, son siempre iguales al
+                        tamaño de fuete del
+                        elemento HTML raíz, además todos los navegadores modernos lo admiten.</p>
+                    <h3>Unidades rem en media queries</h3>
+                    <p>El trabajo con unidades rem requiere de experimentar en diferentes tamaños de pantalla a través
+                        de @media.
+                        El resultado dependerá del tipo de letra. También deberás usar tamaños de fuentes reales y ver
+                        si obtienes el resultado
+                        deseado. Debemos tomar en cuenta que, en pantallas mas pequeñas, el tamaño de fuente será un
+                        poco mas grande en
+                        comparación con las pantallas mas anchas. Esto hará que el texto sea mas legible cuando los
+                        usuarios lean textos en el
+                        móvil o en la tablet.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="agent">
+            <div class="container">
+                <div class="imag"></div>
+                <div class="texto">
+                    <h2>User-agent</h2>
+                    <p>Un user-agent es una aplicación informática que funciona como cliente en un protocolo de red. El
+                        nombre se aplica generalmente para referirse a aquellas aplicaciones que acceden a la World Wide
+                        Web.</p>
+                    <p>Los agentes de usuario que se conectan a la Web pueden ser desde navegadores web hasta los web
+                        crawler de los buscadores, pasando por los teléfonos móviles, lectores de pantalla y navegadores
+                        en Braille usados por personas con discapacidades. Cuando un usuario accede a una página web, la
+                        aplicación generalmente envía una cadena de texto que identifica al agente de usuario ante el
+                        servidor.</p>
+                    <p>La respuesta esta en el restablecimiento de CSS: básicamente una manera de mantener los
+                        resultados lo mas universales posible al eliminar cualquier regla y omisión basadas en el
+                        navegador antes de que se aplique su CSS.</p>
+                    <h3>CSS Reset</h3>
+                    <p>Los Reset CSS son unas hojas de estilo en cascada que se suelen incluir en un documento HTML,
+                        para minimizar las diferencias visuales que se dan al mostrar una misma pagina web, en
+                        diferentes navegadores. Esto porque cada navegador implemente su hoja de estilos propia e
+                        interna, con determinados valores por defecto, que no siempre siguen la recomendación de la
+                        organización W3C.
+                        El reset CSS eliminara gran parte del preformateo del navegador:
+                    </p>
+                    <p>*{
+                        vertical-align: baseline; Font-weight: inherit; font-family: inherit: font-style: inherit;
+                        font-size: 100%; border: 0 none; outline: 0; padding: 0; margin: 0;
+                        }
+                    </p>
+                    <p>Hay varios Reset que se pueden utilizar: Reset de Tantek, Tripoli o Erik Meyer.</p>
+                    <h3>Normalize CSS</h3>
+                    <p>Normalize es una archivo CSS cuyo objetivo es mantener los estilos similares en los navegadores,
+                        porque cada navegador agrega sus propios estilos por defecto. Por ejemplo, suelen agregar
+                        distintos paddings, margins, Font-sizes, etc.</p>
+                    <p>Normalize CSS regulariza estos estilos y hace que el proyecto se vea igual independientemente del
+                        navegador donde se visualice. Además esta preparado para adaptarse completamente a HTML5.</p>
+                    <p>Actualmente se encuentra en la versión 8.0.1 y e compatible con los principales navegadores:
+                        Chrome, Firefox, Opera, Safari (ver 6 en adelante) e Internet Explorar (ver 8 en adelante).</p>
+                    <p>A diferencia de algunos CSS reset, normalize preserva los valores por defecto de los navegadores.
+                        Además también corrige errores e inconsistencias de los navegaores. Normaliza estilos para una
+                        amplia gama de elementos HTML, incluso mejora la usabilidad con mejoras sutiles.</p>
+                        <a href="#hero">Inicio</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <a href="https://oly-219630.000webhostapp.com/5S/Inicio/">Diseño Web HTML5 y CSS3 Adaptativo.</a>
+            <p>&copy;Olinav 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
