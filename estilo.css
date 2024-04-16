@@ -49,6 +49,8 @@ button :hover{
     transition: 0.8s;
 }
 
+
+
 /*Crema ffcdb2 - melon ffb4a2 - rosa e5989b - lila opaco b5838d - gris 6d6875*/
 
 .cont {
@@ -63,6 +65,16 @@ button :hover{
 
 header {
     background-color: #b5838d;
+}
+
+.textoizquierda{
+    padding: 15px;
+    text-align: center;
+}
+
+.texto {
+    padding: 15px;
+    text-align: center;
 }
 
 header .logo {
@@ -160,7 +172,7 @@ header a:hover {
 }
 
 #agent .container {
-    padding: 100px ;
+    padding: 10% ;
 }
 
 #agent {
@@ -197,6 +209,27 @@ footer .container {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 504px) {
+    button h3 {
+        font-size: medium;
+        padding: 25%;
+    }
+}
+
+@media (max-width: 375px) {
+    button h3 {
+        font-size: small;
+        padding: 25%;
+    }
+}
+
+@media (max-width: 360px) {
+    button h3 {
+        font-size: smaller;
+        padding: 25%;
+    }
 }
 
 @media (min-width: 759px){
