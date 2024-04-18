@@ -38,10 +38,19 @@ a:hover{color: #ffcdb2; transition: 0.5s;}
 button{
     background-color: #f8fae5; 
     box-shadow:  10px 5px 10px #6d6875aa;
-    border-color: #b5838d; cursor: pointer;
-    width: 40%;
+    border-color: #b5838d; 
+    cursor: pointer;
+    /*width: 40%;
     display: block;
     margin: auto;
+
+    /*font-family: texto;
+    color: #b5838d;*/
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 button :hover{
@@ -49,13 +58,10 @@ button :hover{
     transition: 0.8s;
 }
 
-
-
 /*Crema ffcdb2 - melon ffb4a2 - rosa e5989b - lila opaco b5838d - gris 6d6875*/
-
 .cont {
-    align-items: center;
-    padding: 5%;
+    /*align-items: center;*/
+    padding: 10%;
 }
 
 .container {
@@ -145,7 +151,7 @@ header a:hover {
 }
 
 .mostrar{
-    display: block;
+    display: block; 
 }
 
 #perso {
@@ -211,26 +217,42 @@ footer .container {
     justify-content: center;
 }
 
-@media (max-width: 504px) {
-    button h3 {
-        font-size: medium;
-        padding: 25%;
+@media (min-width: 560px){
+    button{
+        width: 60%;
+        display: block;
+        margin: auto;
     }
 }
 
-@media (max-width: 375px) {
-    button h3 {
-        font-size: small;
-        padding: 25%;
+@media (min-width: 500px){
+    button{
+        width: 70%;
+        display: block;
+        margin: auto;
     }
 }
 
-@media (max-width: 360px) {
-    button h3 {
-        font-size: smaller;
-        padding: 25%;
+@media (min-width: 320px){
+    button{
+        width: 100%;
+        display: block;
+        margin: auto;
     }
 }
+
+@media(max-width:370px){
+    #perso .textoizquierda h2{
+        margin: 0;
+        padding: 0px;
+        padding-bottom: 35px;
+    }
+
+    #agent .texto{
+        padding: 0;
+    }
+}
+
 
 @media (min-width: 759px){
     #hero{
