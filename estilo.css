@@ -4,8 +4,16 @@
 @font-face {font-family: 'texto';src: url(fonts/goboldlight.ttf);}
 @font-face {font-family: 'nav';src: url(fonts/JostLight.ttf);}
 
+:root {
+    --fondo: #3E1A2b;
+    --nav: #fbb3ca;
+    --sombreado: #faf6f9;
+    --link: #b21839;
+    --hover: #ed4968;
+}
+
 html {scroll-behavior: smooth;}
-body {margin: 0; background-color: #f8fae5;}
+body {margin: 0; background-color: var(--sombreado);}
 
 h1 {font-size: 3.5em;}
 h2 {font-size: 2.7em;padding: 40px;font-family: nav;}
@@ -14,53 +22,44 @@ p {font-size: 1.25em; line-height: 25px; font-family: nav;}
 ul {list-style: none;}
 li {font-size: 1.25em; padding: 20px;line-height: 25px;font-family: nav;}
 strong{font-family: texto;}
-a{font-family: nav; text-decoration: none; color: #b5838d;}
-a:hover{color: #ffcdb2; transition: 0.5s;}
+h4{font-family: texto; font-size: 1.3em; padding: 20px; }
+a{font-family: nav; text-decoration: none; color: var(--nav);}
+a:hover{color: var(--link); transition: 0.5s;}
 
-#agent a{
+#tipores a{
     font-family: texto;
-    color: #b5838d;
+    color: var(--hover);
     display: flex;
-    background-color: #f8fae5;
     align-items: center;
     justify-content: center;
     margin: 15%;
     padding: 20px;
     font-size: 1.3em;
-    box-shadow:  10px 5px 10px #6d6875aa;
+    /*box-shadow:  10px 5px 10px var(--sombreado); #6d6875aa*/
     cursor: pointer;
 }
 
-#agent a:hover{
+#tipores a:hover{
     font-family: titulo;
 }
 
 button{
-    background-color: #f8fae5; 
-    box-shadow:  10px 5px 10px #6d6875aa;
-    border-color: #b5838d; 
+    background-color: var(--sombreado); 
+    box-shadow:  10px 5px 20px var(--fondo);
+    border-color: var(--fondo); 
     cursor: pointer;
-    /*width: 40%;
-    display: block;
-    margin: auto;
-
-    /*font-family: texto;
-    color: #b5838d;*/
     display: flex;
-    
     align-items: center;
     justify-content: center;
     padding: 20px;
 }
 
 button :hover{
-    color: #ffb4a2;
+    color: var(--link); /*#ffb4a2*/
     transition: 0.8s;
 }
 
-/*Crema ffcdb2 - melon ffb4a2 - rosa e5989b - lila opaco b5838d - gris 6d6875*/
 .cont {
-    /*align-items: center;*/
     padding: 10%;
 }
 
@@ -70,7 +69,7 @@ button :hover{
 }
 
 header {
-    background-color: #b5838d;
+    background-color: var(--nav);/*#b53542*/
 }
 
 .textoizquierda{
@@ -92,7 +91,7 @@ header .logo {
     ;
     font-family: 'titulo';
     font-size: 2em;
-    color: #f8fae5;
+    color: var(--fondo);
 }
 
 header .container {
@@ -115,12 +114,12 @@ header a {
     text-decoration: none;
     font-family: 'nav';
     font-size: 1.5em;
-    color: #2b0303;
+    color: #ffffff;
     transition: .4s;
 }
 
 header a:hover {
-    color: #f8fae5;
+    color: var(--fondo);
 }
 
 #hero {
@@ -130,20 +129,27 @@ header a:hover {
     text-align: center;
     flex-direction: column;
     height: 350px;
-    color: #f8fae5;
+    color: var(--sombreado);
     background-image: linear-gradient(0deg,
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.4)), url(imgs/hero.jpg);
+            rgba(255, 255, 255, 0.4),
+            rgba(55, 55, 55, 0.4)), url(ima/neon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     font-family: 'titulo';
 }
 
+#flex{
+    background-color: var(--fondo);color: var(--sombreado);
+}
+
 #flex .container {
     text-align: center;
     padding: 200px 12px;
-    
+}
+
+#dos {
+    color: var(--fondo);
 }
 
 .oculto{
@@ -155,8 +161,8 @@ header a:hover {
 }
 
 #perso {
-    background-color: #e5989b;
-    color: #f8fae5;
+    background-color: var(--fondo); /*#e5989b*/
+    color: var(--sombreado);
     text-align: initial;
 }
 
@@ -165,48 +171,37 @@ header a:hover {
 }
 
 #root {
-    background-color: #e5989b;
-    color: #f8fae5;
+    background-color: var(--fondo);
+    color: var(--sombreado);
     text-align: initial;
     padding: 100px 20px;
 }
 
+
 #tipores .container {
     text-align: center;
     padding: 12px;
-    
-}
-
-#agent .container {
-    padding: 10% ;
-}
-
-#agent {
-    background-color: #e5989b;
-    color: #f8fae5;
-    text-align: initial;
-    
 }
 
 footer {
-    background-color: #6d6875;
+    background-color: var(--link);
     padding: 35px;
 }
 
 footer p {
     margin: 0;
-    color: #f8fae5;
+    color: var(--sombreado);
 }
 
 footer a {
     text-decoration: none;
-    color: #f8fae5;
+    color: var(--fondo);
     display: block;
 }
 
 footer a:hover {
     transition: .4s;
-    color: #ffb4a2;
+    color: var(--sombreado);/*#ffb4a2*/
 }
 
 footer .container {
@@ -247,10 +242,6 @@ footer .container {
         padding: 0px;
         padding-bottom: 35px;
     }
-
-    #agent .texto{
-        padding: 0;
-    }
 }
 
 
@@ -260,7 +251,7 @@ footer .container {
             0deg,
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)
-        ), url(imgs/neon2.png);
+        ), url(ima/neon2.jpg);
     }
 
     header .container{
@@ -294,7 +285,7 @@ footer .container {
     }
 
     #flex .imag{
-        background-image: url(imgs/flexbox-cssgrid.png);
+        background-image: url(ima/frame.png);
         height: 500px;
         background-position: center;
         width: 50%;
@@ -316,7 +307,7 @@ footer .container {
     }
 
     #perso .imag{
-        background-image: url(imgs/variable.jpg);
+        background-image: url(ima/mobile.jpg);
         height: 500px;
         background-size: cover;
         background-position: center;
@@ -339,7 +330,7 @@ footer .container {
     }
 
     #tipores .imag{
-        background-image: url(imgs/legibilidad.jpg);
+        background-image: url(ima/neon4.jpg);
         height: 500px;
         background-position: center;
         width: 50%;
@@ -353,7 +344,7 @@ footer .container {
 
     #color .imag{
         margin: 15px;
-        background-image: url(imgs/color.jpg);
+        background-image: url(ima/neon4.jpg);
         height: 500px;
         background-size: cover;
         background-position: center;
